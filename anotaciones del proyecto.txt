@@ -1,0 +1,30 @@
+04-09
+***Comencé modularizando el trabajo
+***En el domain(entity) cree la clase student
+***En el controller debo crear los controladores....
+------------------------
+07-09 continúe con el proyecto
+***agregue en los controladores el decorado restcontroller(para que springboot sepa que es un archivo)
+***agregue la unificación de dirección con el RequestMapping("/alumnos") en la dirección alumnos.
+***lo que voy a agregar en el código es una mala practica, ya que debo asociarlo a una base de datos. es puramente para practicar.
+asi que voy a agregar las datos en el mismo controlador.
+---------------------------
+07-09
+***agregue los endpoint
+***primero el mostrar alumno con get
+***segundo agregar alumno post
+***tercero modificar total alumno put
+***cuarto parcial 
+***quinto eliminar alumno con delate
+--------------------------------
+10-09
+lo que hago ahora es poner la persistencia.. ya tiene cargado el JPA a las dependencias y también el Hibernate.
+cree la interface para los student. y modifique la entidad(entity) que esta en el package domain…
+tengo que continuar con el código en el repository Student…….
+--------------------------------
+14-09
+***si bien hice modificaciones en los días siguientes al 10-9. ya funciona la base de datos con JPA y MySQL.
+***Recordatorio en la Entity si o si tiene que haber un constructor vacio, ya que no toma los Controllers y genera un bug(solo me deja usar el método post).
+**Ademas el 13-09 agregue la dependencia para el manejo de Exception, donde si no hay campos completos le de un mensaje al usuario.
+*** lo que sigue ahora es hacer la capa de @Service para que la lógica no este directamente inyectada en los controladores(@Controller)
+asi se puede modularizar y pueda ser reutilizable y escalable.
